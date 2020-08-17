@@ -11,8 +11,9 @@ app.use(cors());
 app.use(bodyparser.json());
 app.use(authRoutes); 
 
-const monroUri = 'mongodb://127.0.0.1:27017/pos';
-mongoose.connect(monroUri,{
+  const mongoUri = 'mongodb+srv://admin:admin@cluster0.juplh.mongodb.net/<dbname>?retryWrites=true&w=majority';
+//const mongoUri = 'mongodb://127.0.0.1:27017/pos';
+mongoose.connect(mongoUri,{
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true 
